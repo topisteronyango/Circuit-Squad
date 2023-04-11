@@ -6,7 +6,11 @@ h3 {
     font-size: 1.5rem;
     text-align: center;
 }
-
+.topbar{
+    position: sticky;
+    top: 0;
+    /* overflow: hidden; */
+}
 .form-control {
     margin-bottom: 6px;
 }
@@ -45,12 +49,14 @@ h3 {
 
 .navstaff{
     position: relative;
-    height: 35px;
+    height: 40px;
+    width: 400px;
 
 }
 .but{
     position: absolute;
-    height: 30px;
+    height: 35px;
+    /* border-style: ; */
 }
 
 .btn-primary:hover {
@@ -61,6 +67,99 @@ h3 {
 .medform{
     text-decoration: none;
 }
+.but-class{
+    /* margin-top: 10px; */
+    /* margin-left: 50px; */
+    /* height: 80px; */
+}
+
+.but-class {
+    height: 80px;
+    position: sticky;
+    top: 6;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-bottom: 10px;
+}
+
+.some-btn {
+    border-radius: 20px;
+  }
+  .img-card{
+    /* border-radius: 50%; */
+  }
+  /* .card img{
+    margin-left: 40px;
+    margin-top: 10px;
+  } */
+
+  .card-img-top {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    object-fit: cover; 
+    width: 200px; 
+    height: 200px;
+  }
+  
+
+  .btn:hover {
+    background-color: #0562c6;
+    color: #fff;
+    border-radius: 20px;
+  }
+  
+  
+.nav-div{
+    margin-left: 700px;
+}
+.nav-doc{
+    margin-left: 50px;
+}
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 8%; */
+    /* height: 100vh;  */
+    /* Set the height of the container to 100% of viewport height */
+  }
+
+  .cont1{
+    margin-top: 15px;
+    width: 300px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .btn-class{
+    width: 300px;
+    margin-top: 20px;
+    margin-left:-15px;
+    padding: 0px;
+    align-items: center;
+    
+  }
+  .spec-class{
+    width: 200px;
+  }
+
+  /* button.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #000;
+  } */
+  
+
+  .vl {
+    border-left: 1px solid gray;
+    height: 50px;
+  }
+  
 
 
 
