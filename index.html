@@ -14,8 +14,9 @@
           if (email) {
             var message = "You'll receive an email with the reset link. Click <a href='forgot-password.html'>here</a> to visit our website.";
             var encodedMessage = encodeURIComponent(message);
-            window.location.href = "mailto:" + email + "Click this link to reset your password. <a href=>Reset</a>" + encodedMessage;
-          }
+            //window.location.href = "mailto:" + email + "Click this link to reset your password. <a href=>Reset</a>" + encodedMessage;
+                  
+        }
         }
       </script>
 </head>
@@ -46,7 +47,7 @@
                                         <hr><a class="btn btn-primary d-block btn-google btn-user w-100 mb-2" role="button"><i class="fab fa-google"></i>&nbsp; Login with Google</a><a class="btn btn-primary d-block btn-facebook btn-user w-100" role="button"><i class="fab fa-facebook-f"></i>&nbsp; Login with Microsoft</a>
                                         <hr>
                                     </form>
-                                    <div class="text-center"><a class="small" onclick="sendEmail()">Forgot Password?</a></div>
+                                    <div class="text-center"><a class="small" onclick="sendEmail()" href="forgot-password.html">Forgot Password?</a></div>
                                     <div class="text-center"><a class="small" href="choice.html">Create an Account!</a></div>
                                 </div>
                             </div>
