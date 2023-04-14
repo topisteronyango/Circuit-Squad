@@ -238,7 +238,46 @@
                     </div>
                 </div>
             </section><!-- End: Contact Details -->
+            <section class="portfolio-block projects-cards">
+                <div class="container">
+                    <div class="col-md-8 col-xl-6 text-center mx-auto"><h2 class="fw-bold">Ask our ChatGPT Powered Chatbot</h2></div>
+                    <div class="row d-flex justify-content-center">
+                        <div>
+                            <input type="text" id="prompt" placeholder="Enter your prompt here">
+                            <button onclick="callGPTAPI()">Call ChatGPT API</button>
+                        </div>
+                        <div>
+                            <p id="results"></p>
+                        </div>
+                        <script>
+                            const prompt = document.getElementById('prompt');
+                            const results = document.getElementById('results');
 
+                            function callGPTAPI() {
+                                const options = {
+                                    method: 'POST',
+                                    headers: {
+                                        'content-type': 'application/json',
+                                        'X-RapidAPI-Key': '17c4d5329bmshb9efbf79e63ba19p1a201bjsne1542e949b54',
+                                        'X-RapidAPI-Host': 'openai80.p.rapidapi.com'
+                                    },
+                                    body: `{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"${prompt.value}"}]}`
+                                };
+
+                                fetch(
+                                    'https://openai80.p.rapidapi.com/chat/completions',
+                                    options
+                                )
+                                    .then((response) => response.json())
+                                    .then((response) => {
+                                        results.innerText = response.choices[0].message.content;
+                                    })
+                                    .catch((err) => console.error(err));
+                            }
+                        </script>
+                    </div>
+                </div>
+            </section>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
                     <div class="text-center my-auto copyright"><span>Copyright © NHIS 2023</span></div>
