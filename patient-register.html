@@ -31,8 +31,6 @@
                                     
                                     <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="Address" placeholder="Address" name="address"></div>
                                     <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="PhoneNumber" placeholder="Phone Number" name="phoneNumber"></div>
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="LicenseNumber" placeholder="License Number" name="licenseNumber"></div>
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="Specialization" placeholder="Specialization" name="specialization"></div>
                                 </div>
                                 <div class="mb-3"><input class="form-control form-control-user" type="email" id="Email" aria-describedby="emailHelp" placeholder="Email Address" name="email"></div>
                                 <div class="row mb-3">
@@ -64,19 +62,15 @@
             const emailInput = document.querySelector('#Email');
             const phoneNumberInput = document.querySelector('#PhoneNumber');
             const addressInput = document.querySelector('#Address');
-            const licenseNumberInput = document.querySelector('#LicenseNumber');
-            const specializationInput = document.querySelector('#Specialization');
             const passwordInput = document.querySelector('#Password');
             const firstName = firstNameInput.value;
             const lastName = lastNameInput.value;
             const phoneNumber = phoneNumberInput.value;
             const address = addressInput.value;
-            const licenseNumber = licenseNumberInput.value;
-            const specialization = specializationInput.value;
             const email = emailInput.value;
             const password = passwordInput.value;
-            const formData = { firstName, lastName, address, phoneNumber, specialization, licenseNumber, email, password};
-            axios.post('http://127.0.0.1:3000/nhis/api/doctor/register/1', formData, {
+            const formData = { firstName, lastName, address, phoneNumber,  email, password};
+            axios.post('https://nhis.azurewebsites.net/api', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
