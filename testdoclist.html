@@ -13,218 +13,93 @@
 </head>
 
 <body id="page-top">
-    <div id="wrapper">
-     <!-- <div class="topbar"> -->
-        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
-            <div class="container-fluid d-flex flex-column p-0 sticky-top"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                    <div class="sidebar-brand-icon rotate-n-15"><img src="https://img.icons8.com/avantgarde/55/null/heart-with-pulse.png"/></div>
-                    <div class="sidebar-brand-text mx-3"><span>NHIS</span></div>
-                </a>
-                <hr class="sidebar-divider my-0">
-                <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link active" href="doctor.html"><i class="fas fa-tachometer-alt"></i><span>Doctor Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="patient.html"><i class="fas fa-tachometer-alt"></i><span>Patient Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="insurance.html"><i class="fas fa-tachometer-alt"></i><span>Insurance Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="plist.html"><i class="fas fa-table"></i><span>Patients</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="dlist.html"><i class="fas fa-table"></i><span>Doctors</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="chat.html"><i class="fas fa-comments"></i><span>Chat</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="calendar.html"><i class="fas fa-calendar-days"></i><span>Calendar</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="support.html"><i class="fas fa-headset"></i><span>Support</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="settings.html"><i class="fas fa-cogs"></i><span>Settings</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="register.html"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-right-from-bracket"></i><span>Log Out</span></a></li>
-                </ul>
-                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
-            </div>
-        </nav>
-        <div class="d-flex flex-column" id="content-wrapper">
-            <div id="content">
-                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
-                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
-                            <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ..."><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
-                        </form>
-                        <ul class="navbar-nav flex-nowrap ms-auto">
-                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
-                                <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">
-                                    <form class="me-auto navbar-search w-100">
-                                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
-                                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown no-arrow mx-1">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">3+</span><i class="fas fa-bell fa-fw"></i></a>
-                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
-                                        <h6 class="dropdown-header">alerts center</h6><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="me-3">
-                                                <div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div>
-                                            </div>
-                                            <div><span class="small text-gray-500">December 12th, 2021</span>
-                                                <p>A new monthly report is ready to download!</p>
-                                            </div>
-                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="me-3">
-                                                <div class="bg-success icon-circle"><i class="fas fa-donate text-white"></i></div>
-                                            </div>
-                                            <div><span class="small text-gray-500">January 27th, 2022</span>
-                                                <p>You have new patient appointment requests</p>
-                                            </div>
-                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="me-3">
-                                                <div class="bg-warning icon-circle"><i class="fas fa-exclamation-triangle text-white"></i></div>
-                                            </div>
-                                            <div><span class="small text-gray-500">May 2nd, 2022</span>
-                                                <p>Dr. Rogers sent you some documents</p>
-                                            </div>
-                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown no-arrow mx-1">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">7</span><i class="fas fa-envelope fa-fw"></i></a>
-                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
-                                        <h6 class="dropdown-header">alerts center</h6><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar4.jpeg?h=fefb30b61c8459a66bd338b7d790c3d5">
-                                                <div class="bg-success status-indicator"></div>
-                                            </div>
-                                            <div class="fw-bold">
-                                                <div class="text-truncate"><span>Hi there! I am having some red rash forming on my arm, any advice?</span></div>
-                                                <p class="small text-gray-500 mb-0">Emily Ndambuki - 58m</p>
-                                            </div>
-                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar2.jpeg?h=5d142be9441885f0935b84cf739d4112">
-                                                <div class="status-indicator"></div>
-                                            </div>
-                                            <div class="fw-bold">
-                                                <div class="text-truncate"><span>The Health Insurance request made by James Justin for the surgery has been approved.</span></div>
-                                                <p class="small text-gray-500 mb-0">NHIF - 1d</p>
-                                            </div>
-                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar3.jpeg?h=c5166867f10a4e454b5b2ae8d63268b3">
-                                                <div class="bg-warning status-indicator"></div>
-                                            </div>
-                                            <div class="fw-bold">
-                                                <div class="text-truncate"><span>Hello i finished my medication and im feeling better, thanks.</span></div>
-                                                <p class="small text-gray-500 mb-0">Dr. Edgar Lumumba - 2d</p>
-                                            </div>
-                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar5.jpeg?h=35dc45edbcda6b3fc752dab2b0f082ea">
-                                                <div class="bg-success status-indicator"></div>
-                                            </div>
-                                            <div class="fw-bold">
-                                                <div class="text-truncate"><span>We have added some new features!</span></div>
-                                                <p class="small text-gray-500 mb-0">NHIS Team · 2h</p>
-                                            </div>
-                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                                    </div>
-                                </div>
-                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-end" aria-labelledby="alertsDropdown"></div>
-                            </li>
-                            <div class="d-none d-sm-block topbar-divider"></div>
-                            <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Dr.Havi</span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar2.jpeg" width="100"></a>
-                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a>
-                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+    <!-- <div class="topbar"> -->
+    <nav class="navbar navbar-light navbar-expand bg-white  mb-6 sticky-top topbar">
+        <a class="navbar-brand nav-doc" href="#">Doctors</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="container-fluid nav-div"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+            <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search navstaff">
+                <div class="input-group"><input class="bg-light form-control border-0 small " type="text" placeholder="Search Doctor"><button class="btn btn-primary py-0 but" type="button"><i class="fas fa-search"></i></button></div>
+            </form>
+        </div>
+      
+    </nav>
+    <!-- </div> -->
+<div id="wrapper">
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div class="shadow-sm p-3 mb-5 bg-white rounded but-class" style="border: 1px hidden #ccc;">
+            <ul class="list-unstyled">
+                <li class="nav-item">
+                    <div class="btn-group btn-items" role="group">
+                      <button type="button" class="btn some-btn rounded-pill mx-3">All</button>
+                      <button type="button" class="btn some-btn rounded-pill mx-3">Cardiologist</button>
+                      <button type="button" class="btn some-btn rounded-pill mx-3">Surgeon</button>
+                      <button type="button" class="btn some-btn rounded-pill mx-3">Dentist</button>
+                      <button type="button" class="btn some-btn rounded-pill mx-3">Gynacologist</button>
+                      <button type="button" class="btn some-btn rounded-pill mx-3">General</button>
+                      <button type="button" class="btn some-btn rounded-pill mx-3">Geriatrics</button>
+                      <button type="button" class="btn some-btn rounded-pill mx-3">Endocrinology</button>
+                      <button type="button" class="btn some-btn rounded-pill mx-3">Gynecologists</button>
+                      <!-- <button type="button" class="btn some-btn rounded-pill mx-3">Oncologists</button> -->
                     </div>
-                </nav>
-        
-                <div class="container-fluid">
-                    <div class="row">
-                        
-                            <div class="row">
-                                <div class="flex-column">
-                                    <div class="col-md-6 col-xl-3 mb-4">
-                                        <div class="card shadow border-start-primary py-2">
-                                            <div class="card-body">
-                                                <div class="row align-items-center no-gutters">
-                                                    <div class="col me-2">
-                                                        <div class="text-dark fw-bold h5 mb-0"><span>Welcome to Your Dashboard</span></div>
-                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>1232-4567-8901</span></div>
-                                                        <div class="text-dark h5 mb-0"><span>Member ID</span></div>
-                                                    </div>
-                                                    <div class="card-footer d-flex justify-content-between align-items-center">
-                                                        Alexandra Smith <br>
-                                                        Member Since 2019
-                                                        
-                                                        <button type="button" class="btn btn-sm  px-1 py-1">
-                                                            <i class="fas fa-phone mr-2"></i>Call Me
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="row">
-                                <div class="col-md-6 col-xl-3 mb-4">
-                                    <div class="card shadow border-start-primary py-2">
-                                        <div class="card-body">
-                                            <div class="row align-items-center no-gutters">
-                                                <div class="col me-2">
-                                                    <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Patients</span></div>
-                                                    <div class="text-dark fw-bold h5 mb-0"><span>750</span></div>
-                                                </div>
-                                                <div class="col-auto"><img src="https://img.icons8.com/external-fauzidea-detailed-outline-fauzidea/46/null/external-patients-pandemic-fauzidea-detailed-outline-fauzidea.png"/></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-3 mb-4">
-                                    <div class="card shadow border-start-success py-2">
-                                        <div class="card-body">
-                                            <div class="row align-items-center no-gutters">
-                                                <div class="col me-2">
-                                                    <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Income</span></div>
-                                                    <div class="text-dark fw-bold h5 mb-0"><span>$2,000</span></div>
-                                                </div>
-                                                <div class="col-auto"><img src="https://img.icons8.com/material-sharp/46/null/money-bag.png"/></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-3 mb-4">
-                                    <div class="card shadow border-start-info py-2">
-                                        <div class="card-body">
-                                            <div class="row align-items-center no-gutters">
-                                                <div class="col me-2">
-                                                    <div class="text-uppercase text-info fw-bold text-xs mb-1"><span>Appointments</span></div>
-                                                    <div class="row g-0 align-items-center">
-                                                        <div class="col-auto">
-                                                            <div class="text-dark fw-bold h5 mb-0 me-3"><span>300</span></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto"><img src="https://img.icons8.com/ios/46/null/treatment-plan--v1.png"/></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-3 mb-4">
-                                    <div class="card shadow border-start-success py-2">
-                                        <div class="card-body">
-                                            <div class="row align-items-center no-gutters">
-                                                <div class="col me-2">
-                                                    <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Cancelled</span></div>
-                                                    <div class="text-dark fw-bold h5 mb-0"><span>10</span></div>
-                                                </div>
-                                                <div class="col-auto"><img src="https://img.icons8.com/ios-filled/46/null/delete-sign--v1.png"/></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  </li>
+          
+            </ul>
+        </div>
 
-                <div class="row row-cols-1 row-cols-md-3">
+        <div id="content">
+        
+                <div class="row row-cols-1 row-cols-md-4">
+                    <div class="col mb-4">
+                        <div class="card">
+                            <img src="./assets/images/doc2.jpg" class="card-img-top rounded-circle mx-auto d-block img-fluid img-card" alt="...">
+                            <div class="card-body d-flex justify-content-center">
+                              <div class="text-center">
+                                <h5 class="card-title">Dr. John Doe</h5>
+
+                                <p class="card-text">123 Main Street<br> Anytown, USA 12345</p>
+                                <button type="button" class="btn btn-secondary text-uppercase spec-class" style="color: blue;" disabled>Dentist</button>
+                              </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <button type="button" class="btn btn-sm px-4 py-2">
+                                        <i class="fas fa-clock mr-6"></i>Availability
+                                    </button>
+                                    
+                                    <button type="button" class="btn btn-sm  px-4 py-2">
+                                        <i class="fas fa-phone mr-2"></i>Call Me
+                                    </button>
+                            </div>
+                          </div>
+                          
+                          
+                      </div>                      
+
+
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="./assets/images/doc.jpg" class="card-img-top rounded-circle mx-auto d-block img-fluid img-card" alt="...">
+                        <div class="card-body d-flex justify-content-center">
+                            <div class="text-center">
+                              <h5 class="card-title">Dr. John Doe</h5>
+
+                              <p class="card-text">123 Main Street<br> Anytown, USA 12345</p>
+                              <button type="button" class="btn btn-secondary text-uppercase spec-class" style="color: blue;" disabled>Oncologists</button>
+                            </div>
+                          </div>
+                          <div class="card-footer d-flex justify-content-between align-items-center">
+                                  <button type="button" class="btn btn-sm px-4 py-2">
+                                      <i class="fas fa-clock mr-4"></i>Availability
+                                  </button>
+                                  
+                                  <button type="button" class="btn btn-sm  px-4 py-2">
+                                      <i class="fas fa-phone mr-2"></i>Call Me
+                                  </button>
+                          </div>
+                      </div>
+                    </div>
                     <div class="col mb-4">
                       <div class="card">
                         <img src="./assets/images/doc2.jpg" class="card-img-top rounded-circle mx-auto d-block img-fluid img-card" alt="...">
@@ -247,7 +122,6 @@
                           </div>
                       </div>
                     </div>
-
                     <div class="col mb-4">
                       <div class="card">
                         <img src="./assets/images/doc.jpg" class="card-img-top rounded-circle mx-auto d-block img-fluid img-card" alt="...">
@@ -293,7 +167,6 @@
                           </div>
                         </div>
                       </div>
-
                       <div class="col mb-4">
                         <div class="card">
                           <img src="./assets/images/doc.jpg" class="card-img-top rounded-circle mx-auto d-block img-fluid img-card" alt="...">
@@ -339,7 +212,6 @@
                           </div>
                         </div>
                       </div>
-
                       <div class="col mb-4">
                         <div class="card">
                           <img src="./assets/images/doc.jpg" class="card-img-top rounded-circle mx-auto d-block img-fluid img-card" alt="...">
@@ -449,7 +321,7 @@
                                   <button type="button" class="btn btn-sm  px-4 py-2">
                                       <i class="fas fa-phone mr-2"></i>Call Me
                                   </button>
-                            </div>
+                          </div>
                         </div>
                       </div>
 
@@ -555,6 +427,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
     <script src="assets/js/bs-init.js?h=e2b0d57f2c4a9b0d13919304f87f79ae"></script>
     <script src="assets/js/theme.js?h=79f403485707cf2617c5bc5a2d386bb0"></script>
-</body>
+</div>
+ </body>
 
 </html>
