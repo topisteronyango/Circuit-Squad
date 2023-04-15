@@ -1,13 +1,26 @@
-const mongoose = require('mongoose');
+const {Sequelize} = require('sequelize');
 
 const logger = require('./winston.config');
 
-mongoose.connect(process.env.DATABASE_CONNETION_URI);
+const sequelize = new Sequelize(
+    process.env.DATABASE_NAME, 
+    process.env.DATABASE_USERNAME, 
+    process.env.DATABASE_PASSWORD, 
+    { 
+        host: process.env.DATABASE_SERVER_NAME,
+        dialect: "mssql",
+        logging: false
+    });
 
-mongoose.connection.once('open', ()=>{
-    logger.info("Database connection intiated.");
-    console.log("Database connection initiated.");
-}).on('error', (error)=>{
-    logger.error(`Error connecting to the database server: ${error.message}`);
-    console.log(`Error connecting to the database server: ${error.message}`);
+
+
+sequelize.authenticate()
+.then(()=>{
+    logger.info('Successfully connected to the database server');
+    console.log('Successfully connected to the database server');
 })
+.catch((e)=>{
+    throw e;
+})    
+
+module.exports = sequelize;
