@@ -1,0 +1,10 @@
+{"level":"error","message":"Error connecting to database server: Access denied for user 'root'@'localhost'","service":"circuit_squad_api_service"}
+{"level":"error","message":"Error connecting to database server: Access denied for user 'root'@'localhost'","service":"circuit_squad_api_service"}
+{"level":"error","message":"Error connecting to database server: Access denied for user 'PaulSanga'@'%' to database 'CircuitSquad'","service":"circuit_squad_api_service"}
+{"level":"error","message":"Error connecting to database server: Access denied for user 'PaulSanga'@'%' to database 'CircuitSquad'","service":"circuit_squad_api_service"}
+{"level":"error","message":"Error connecting to database server: Access denied for user 'root'@'localhost'","service":"circuit_squad_api_service"}
+{"level":"error","message":"Error connecting to database server: Access denied for user 'root'@'localhost'","service":"circuit_squad_api_service"}
+{"level":"error","message":"Error connecting to database server: Access denied for user 'root'@'localhost'","service":"circuit_squad_api_service"}
+{"level":"error","message":"Internal server error: Cannot read properties of undefined (reading 'findOne')","service":"circuit_squad_api_service"}
+{"level":"error","message":"Internal server error: Doctor.findOne is not a function","service":"circuit_squad_api_service"}
+{"level":"error","message":"Internal server error: Unexpected token } in JSON at position 40","service":"circuit_squad_api_service"}
