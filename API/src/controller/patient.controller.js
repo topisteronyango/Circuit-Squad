@@ -5,7 +5,6 @@ const Patient = require('../models/Patient.model');
 const { createToken } = require('../utils/token');
 const Hospital = require('../models/Hospital.model');
 const InsuaranceCompany = require('../models/InsuranceCompany.model');
-const { add } = require('winston');
 
 module.exports.registerPatient = (req, res)=>{
     const { 
@@ -20,8 +19,6 @@ module.exports.registerPatient = (req, res)=>{
         healthCondtion,
         insuranceMembershipNumber,
      } = req.body;
-     const hospitalId = req.params.hospitalId;
-     const insuranceCompanyId = req.params.insuranceCompanyId;
 
      if(!firstName && !lastName && !email && !phoneNumber && !address && !dateOfBirth && !gender && !password && !healthCondtion && !insuranceMembershipNumber)
      {
@@ -48,8 +45,6 @@ module.exports.registerPatient = (req, res)=>{
                     password,
                     healthCondtion,
                     insuranceMembershipNumber,
-                    hospitalId,
-                    insuranceCompanyId
                 })
                 .then((patient)=>{
                     const jwt = createToken({id: patient.id, permissions: patient.isPatient});
@@ -145,6 +140,20 @@ module.exports.getPatients = (req, res)=>{
     })
     .then((patients)=>{
         res.status(200).json({message: 'Fetch successful', patients});
+    })
+    .catch((e)=>{
+        throw e;
+    })
+}
+
+module.exports.assignHopsitalAndInsurance = (req, res)=>{
+    const hospitalId = req.params.hospitalId;
+    const insuranceCompanyId = req.params.insuranceCompanyId;
+    const id = req.params.id;
+
+    Patient.findByPk(id)
+    .then((patient)=>{
+        patient.update({hospitalId, insuranceCompanyId})
     })
     .catch((e)=>{
         throw e;

@@ -14,8 +14,8 @@
         }
     },
     "host": "127.0.0.1:3000",
-    "basePath": "nhis.azurewebsites.net/nhis/api/",
-    "schemes": ["http", "https"],
+    "basePath": "nhis.azurewebsites.net/api/",
+    "schemes": ["https"],
     "paths": {
 
         "/ministryOfHealth/register": {
@@ -156,7 +156,7 @@
 
         },
 
-        "/hospital/register/{ministryOfHealthId}": {
+        "/hospital/register": {
             "post": {
                 "tags": ["Hospital"],
                 "summary": "Creates a new hospital account",
@@ -491,7 +491,7 @@
 
         },
 
-        "/doctor/register/{hospitalId}": {
+        "/doctor/register": {
             "post": {
                 "tags": ["Doctor"],
                 "summary": "Creates a new doctor account",
@@ -500,12 +500,6 @@
                 "consumes": ["application/json"],
                 "produces": ["application/json"],
                 "parameters": [
-                    {
-                        "in": "path",
-                        "name": "hospitalId",
-                        "description": "Numeric ID of the hospital the doctor belongs to post",
-                        "required": true
-                    },
                     {
                         "in": "body",
                         "name": "body",
@@ -688,7 +682,7 @@
 
         },
 
-        "/patient/register/{hospitalId}/{insuranceCompanyId}": {
+        "/patient/register": {
             "post": {
                 "tags": ["Patient"],
                 "summary": "Creates a new patient account",
@@ -697,18 +691,6 @@
                 "consumes": ["application/json"],
                 "produces": ["application/json"],
                 "parameters": [
-                    {
-                        "in": "path",
-                        "name": "hospitalId",
-                        "description": "Numeric ID of the hospital the patient belongs to",
-                        "required": true
-                    },
-                    {
-                        "in": "path",
-                        "name": "insuranceCompanyId",
-                        "description": "Numeric ID of the insurance company that offer health insuarance to the patient",
-                        "required": true
-                    },
                     {
                         "in": "body",
                         "name": "body",
