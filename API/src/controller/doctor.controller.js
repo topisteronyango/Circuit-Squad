@@ -17,7 +17,6 @@ module.exports.registerDoctor = (req, res)=>{
         specialization, 
         password
     } = req.body;
-    const hospitalId = req.params.hospitalId;
 
     if(!firstName && !lastName && !email && !phoneNumber && !address && !licenseNumber && !specialization && !password)
     {
@@ -33,7 +32,7 @@ module.exports.registerDoctor = (req, res)=>{
         .then((registredDoctor)=>{
             if(!registredDoctor)
             {
-                Doctor.create({firstName, lastName, email, phoneNumber, address, licenseNumber, specialization, password, hospitalId})
+                Doctor.create({firstName, lastName, email, phoneNumber, address, licenseNumber, specialization, password})
                 .then((doctor)=>{
                     const jwt = createToken({id: doctor.id, isDoctor: doctor.isDoctor});
                     res.status(201).json({message: 'Doctor account created successfully', doctor, jwt})
@@ -121,6 +120,18 @@ module.exports.getDoctors = (req, res)=>{
     })
     .then((doctors)=>{
         res.status(200).json({message: 'Fetch successful', doctors});
+    })
+    .catch((e)=>{
+        throw e;
+    })
+}
+
+module.exports.assignHospital = (req, res)=>{
+    const hospitalId = req.params.hospitalId;
+    const id = req.params.id;
+    Doctor.findByPk(id)
+    .then((doctor)=>{
+        doctor.update({hospitalId});
     })
     .catch((e)=>{
         throw e;

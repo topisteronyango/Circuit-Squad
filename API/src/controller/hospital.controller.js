@@ -14,8 +14,6 @@ module.exports.registerHospital = (req, res)=>{
         password
      } = req.body;
 
-     const ministryOfHealthId = req.params.ministryOfHealthId;
-
      if(!name && !email && !phoneNumber && !address && !password)
      {
         res.status(400).json({message: 'Please provide all the hospital details in order to create the hospital account.'})
@@ -35,8 +33,7 @@ module.exports.registerHospital = (req, res)=>{
                     email,
                     phoneNumber,
                     address,
-                    password,
-                    ministryOfHealthId
+                    password
                 })
                 .then((hospital)=>{
                     const jwt = createToken({ id: hospital.id, isHospital: hospital.isHospital});
@@ -90,6 +87,18 @@ module.exports.loginHospital = async(req, res)=>{
     }
 }
 
+
+module.exports.assignMinistryOfHealth = (req, res)=>{
+    const ministryOfHealthId = req.params.ministryOfHealthId;
+    const id = req.params.id;
+    Hospital.findByPk(id)
+    .then((hospital)=>{
+        hospital.update(ministryOfHealthId);
+    })
+    .catch((e)=>{
+        throw e;
+    })
+}
 
 module.exports.getHospitals = (req, res)=>{
     Hospital.findAll({ 

@@ -27,7 +27,7 @@ process.on('unhandledRejection', (ex)=>{
     throw ex;
 });
 
-app.use('/nhis/api', routes);
+app.use('/api', routes);
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
 app.use(errorLogger);
 
