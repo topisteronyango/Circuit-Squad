@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=cb606d99bb2418df19b6bc818b41e412">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 
 <body id="page-top">
@@ -135,9 +136,9 @@
                 <div class="container">
                     <div class="col-md-8 col-xl-6 text-center mx-auto"><h2 class="fw-bold">Ask our ChatGPT Powered Chatbot</h2></div>
                     <div class="row d-flex justify-content-center">
-                        <div>
+                        <div class="text-center">
                             <input type="text" id="prompt" placeholder="Enter your prompt here">
-                            <button onclick="callGPTAPI()">Call ChatGPT API</button>
+                            <button class="btn btn-primary btn-user" onclick="callGPTAPI()">Call ChatGPT API</button>
                         </div>
                         <div>
                             <p id="results"></p>
@@ -173,6 +174,7 @@
             </section>    
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
+                        <p><b>Disclaimer: </b>ChatGPT is an AI language model and is not a substitute for professional medical advice, diagnosis, or treatment. The information provided by ChatGPT is for general informational purposes only and should not be relied upon or used as the sole basis for making decisions regarding your health. Always consult a qualified healthcare provider before making any changes to your healthcare regimen.</p>
                     <div class="text-center my-auto copyright"><span>Copyright © NHIS 2023</span></div>
                 </div>
             </footer>
