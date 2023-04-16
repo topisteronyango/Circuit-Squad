@@ -12,6 +12,7 @@ module.exports.requireDoctorAuthorization = (req, res, next)=>{
         {
             const bearer = bearerHeader.split(' ');
             const token = bearer[1];
+            
             if(!token)
             {
                 return res.status(401).json({message: 'Authentication token not set'});
@@ -19,6 +20,7 @@ module.exports.requireDoctorAuthorization = (req, res, next)=>{
             else
             {
                 return jwt.verify(token, process.env.SECRET_KEY, (err, decodedToken)=>{
+    
                     if(err)
                     {
                         return res.status(401).json({message: `Invalid authentication token: ${err.message}`});

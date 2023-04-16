@@ -26,24 +26,24 @@
                             </div>
                             <form class="user" id="form">
                                 <div class="row mb-3">
-                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" id="FirstName" placeholder="First Name" name="first_name"></div>
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="LastName" placeholder="Last Name" name="last_name"></div>
-                                    
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="Address" placeholder="Address" name="address"></div>
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="PhoneNumber" placeholder="Phone Number" name="phoneNumber"></div>
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="LicenseNumber" placeholder="License Number" name="licenseNumber"></div>
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="Specialization" placeholder="Specialization" name="specialization"></div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" id="FirstName" placeholder="First Name" name="first_name" min="2" max="30" required></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="LastName" placeholder="Last Name" name="last_name" min="2" max="30"  required></div>
                                 </div>
-                                <div class="mb-3"><input class="form-control form-control-user" type="email" id="Email" aria-describedby="emailHelp" placeholder="Email Address" name="email"></div>
                                 <div class="row mb-3">
-                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="examplePasswordInput" placeholder="Password" name="password"></div>
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="password" id="exampleRepeatPasswordInput" placeholder="Repeat Password" name="password_repeat"></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="Address" placeholder="Address" name="address" required></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="PhoneNumber" placeholder="Phone Number" name="phoneNumber" required></div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="LicenseNumber" placeholder="License Number" name="licenseNumber" required></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="Specialization" placeholder="Specialization" name="specialization" required></div>
+                                </div>
+                                <div class="mb-3"><input class="form-control form-control-user" type="email" id="Email" aria-describedby="emailHelp" placeholder="Email Address" name="email" required></div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="Password" placeholder="Password" name="password" required></div>
                                 </div><button class="btn btn-primary d-block btn-user w-100" type="submit">Register Account</button>
-                                <hr><a class="btn btn-primary d-block btn-google btn-user w-100 mb-2" role="button"><i class="fab fa-google"></i>&nbsp; Register with Google</a><a class="btn btn-primary d-block btn-facebook btn-user w-100" role="button"><i class="fab fa-microsoft"></i>&nbsp; Register with Microsoft</a>
-                                <hr>
                             </form>
                              
-                            <div class="text-center"><a class="small" href="patient-login.html">Already have an account? Login!</a></div>
+                            <div class="text-center mt-4"><a class="small" href="doctorLogin.html">Already have an account? Login!</a></div>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
             const email = emailInput.value;
             const password = passwordInput.value;
             const formData = { firstName, lastName, address, phoneNumber, specialization, licenseNumber, email, password};
-            axios.post('http://127.0.0.1:3000/nhis/api/doctor/register/1', formData, {
+            axios.post('http://127.0.0.1:3000/api/doctor/register', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -84,7 +84,7 @@
             .then((response)=>{
                 console.log(response.data);
                 localStorage.setItem('doctor', response.data.doctor);
-                localStorage.setItem('token', response.data.jwt);
+                localStorage.setItem('doctor_token', response.data.jwt);
                 window.location.href="doctor.html"
             })
             .catch((e)=>{

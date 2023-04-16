@@ -8,3 +8,4 @@
 {"level":"error","message":"Internal server error: Cannot read properties of undefined (reading 'findOne')","service":"circuit_squad_api_service"}
 {"level":"error","message":"Internal server error: Doctor.findOne is not a function","service":"circuit_squad_api_service"}
 {"level":"error","message":"Internal server error: Unexpected token } in JSON at position 40","service":"circuit_squad_api_service"}
+{"level":"error","message":"Internal server error: Cannot read properties of null (reading 'message')","service":"circuit_squad_api_service"}
