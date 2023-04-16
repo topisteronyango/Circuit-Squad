@@ -24,7 +24,7 @@
                 <li class="nav-item"><a class="nav-link" href="patient.html"><i class="fas fa-tachometer-alt"></i><span>Patient Dashboard</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="insurance.html"><i class="fas fa-tachometer-alt"></i><span>Insurance Dashboard</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="plist.html"><i class="fas fa-table"></i><span>Patients</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="dlist.html"><i class="fas fa-table"></i><span>Doctors</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="doctorlist.html"><i class="fas fa-table"></i><span>Doctors</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="chat.html"><i class="fas fa-comments"></i><span>Chat</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="calendar.html"><i class="fas fa-calendar-days"></i><span>Calendar</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="support.html"><i class="fas fa-headset"></i><span>Support</span></a></li>
@@ -136,9 +136,9 @@
                 <div class="container">
                     <div class="col-md-8 col-xl-6 text-center mx-auto"><h2 class="fw-bold">Ask our ChatGPT Powered Chatbot</h2></div>
                     <div class="row d-flex justify-content-center">
-                        <div>
+                        <div class="text-center">
                             <input type="text" id="prompt" placeholder="Enter your prompt here">
-                            <button onclick="callGPTAPI()">Call ChatGPT API</button>
+                            <button class="btn btn-primary btn-user" onclick="callGPTAPI()">Call ChatGPT API</button>
                         </div>
                         <div>
                             <p id="results"></p>
@@ -174,6 +174,7 @@
             </section>    
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
+                        <p><b>Disclaimer: </b>ChatGPT is an AI language model and is not a substitute for professional medical advice, diagnosis, or treatment. The information provided by ChatGPT is for general informational purposes only and should not be relied upon or used as the sole basis for making decisions regarding your health. Always consult a qualified healthcare provider before making any changes to your healthcare regimen.</p>
                     <div class="text-center my-auto copyright"><span>Copyright © NHIS 2023</span></div>
                 </div>
             </footer>
