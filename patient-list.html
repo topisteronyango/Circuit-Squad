@@ -310,7 +310,7 @@
                 authorization: `Bearer ${doctorToken}`
             }
         })
-        authAxios.get('http://127.0.0.1:3000/api/patients') 
+        authAxios.get('http://127.0.0.1:nhis.azurewebsites.net/api/patients') 
         .then((response)=>{
             console.log(response.data.patients)
         })

@@ -51,16 +51,16 @@
             const email = emailInput.value;
             const password = passwordInput.value;
             const formData = {email, password};
-            axios.post('http://127.0.0.1:3000/api/patient/login', formData, {
+            axios.post('http://nhis.azurewebsites.net/api/patient/login', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             })
             .then((response)=>{
                 console.log(response.data);
-                localStorage.setItem('doctor', JSON.stringify(response.data.doctor));
-                localStorage.setItem('doctor_token', response.data.jwt);
-                window.location.href="doctor.html"
+                localStorage.setItem('patient', JSON.stringify(response.data.patient));
+                localStorage.setItem('patient_token', response.data.jwt);
+                window.location.href="patient.html"
             })
             .catch((e)=>{
                 window.location.href="invalidFormInput.html"
