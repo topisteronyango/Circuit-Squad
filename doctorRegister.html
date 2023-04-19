@@ -86,7 +86,6 @@
                              
                             <div class="text-center mt-4"><a class="small" href="doctorLogin.html">Already have an account? Login!</a></div>
 ========
-                            <div class="text-center"><a class="small" href="doctor-login.html">Already have an account? Login!</a></div>
 >>>>>>>> 5955bef4e22e6b4fa7a16fd6ac86435ee2d632d2:doctor-register.html
                         </div>
                     </div>
@@ -120,7 +119,7 @@
             const email = emailInput.value;
             const password = passwordInput.value;
             const formData = { firstName, lastName, address, phoneNumber, specialization, licenseNumber, email, password};
-            axios.post('http://127.0.0.1:3000/api/doctor/register', formData, {
+            axios.post('http://nhis.azurewebsites.net/api/doctor/register', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

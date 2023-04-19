@@ -51,7 +51,7 @@
             const email = emailInput.value;
             const password = passwordInput.value;
             const formData = {email, password};
-            axios.post('http://127.0.0.1:3000/api/insuaranceCompany/login', formData, {
+            axios.post('http://nhis.azurewebsites.net/api/insuaranceCompany/login', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

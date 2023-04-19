@@ -87,7 +87,7 @@
             const email = emailInput.value;
             const password = passwordInput.value;
             const formData = { firstName, lastName, address, phoneNumber, insuranceMembershipNumber, healthCondtion, email, password, gender, dateOfBirth};
-            axios.post('http://127.0.0.1:3000/api/patient/register', formData, {
+            axios.post('http://nhis.azurewebsites.net/api/patient/register', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
