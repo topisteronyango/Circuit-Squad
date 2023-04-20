@@ -25,7 +25,7 @@ module.exports.requireAllAuthorization = (req, res, next)=>{
                     }
                     if(decodedToken.hasOwnProperty('isPatient'))
                     {
-
+                        return next();
                     }
                     else if(decodedToken.hasOwnProperty('isDoctor'))
                     {

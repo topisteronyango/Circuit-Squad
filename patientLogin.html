@@ -30,7 +30,7 @@
                                 <div class="mb-3"><input class="form-control form-control-user" type="password" id="Password" placeholder="Password" name="password" required></div>
                                 <button class="btn btn-primary d-block btn-user w-100" type="submit">Login</button>
                             </form>
-                            <div class="text-center mt-4"><a class="small" href="insurance-register.html">Don't have an account? Register!</a></div>
+                            <div class="text-center mt-4"><a class="small" href="patientRegister.html">Don't have an account? Register!</a></div>
                         </div>
                     </div>
                 </div>
@@ -51,19 +51,19 @@
             const email = emailInput.value;
             const password = passwordInput.value;
             const formData = {email, password};
-            axios.post('http://nhis.azurewebsites.net/api/insuaranceCompany/login', formData, {
+            axios.post('http://nhis.azurewebsites.net/api/patient/login', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             })
             .then((response)=>{
                 console.log(response.data);
-                localStorage.setItem('insuaranceCompany', JSON.stringify(response.data.doctor));
-                localStorage.setItem('insurance_token', response.data.jwt);
-                window.location.href="insurance.html"
+                localStorage.setItem('patient', JSON.stringify(response.data.patient));
+                localStorage.setItem('patient_token', response.data.jwt);
+                window.location.href="patient.html"
             })
             .catch((e)=>{
-                window.location.href="invalidFormInput.html"
+                window.location.href="patient.html"
                 console.log(e);
             })
         })
