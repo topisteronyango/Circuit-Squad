@@ -22,15 +22,15 @@
             <ul class="navbar-nav text-light" id="accordionSidebar">
                 <li class="nav-item"><a class="nav-link" href="doctor.html"><i class="fas fa-tachometer-alt"></i><span>Doctor Dashboard</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="patient.html"><i class="fas fa-tachometer-alt"></i><span>Patient Dashboard</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="./Insurance/template/insurance.html"><i class="fas fa-tachometer-alt"></i><span>Insurance Dashboard</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="plist.html"><i class="fas fa-table"></i><span>Patients</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="insurance.html"><i class="fas fa-tachometer-alt"></i><span>Insurance Dashboard</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="patient-list.html"><i class="fas fa-table"></i><span>Patients</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="doctorlist.html"><i class="fas fa-table"></i><span>Doctors</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="chat.html"><i class="fas fa-comments"></i><span>Chat</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="calendar.html"><i class="fas fa-calendar-days"></i><span>Calendar</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="support.html"><i class="fas fa-headset"></i><span>Support</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="settings.html"><i class="fas fa-cogs"></i><span>Settings</span></a></li>
                 <li class="nav-item"><a class="nav-link active" href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-right-from-bracket"></i><span>Log Out</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="patientLogin.html"><i class="fas fa-right-from-bracket"></i><span>Log Out</span></a></li>
             </ul>
             <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
         </div>
@@ -124,7 +124,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Moses Mtengo</span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar3.jpeg"></a>
                                 <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="profile.html"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="settings.html"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a>
-                                    <div class="dropdown-divider"></div><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    <div class="dropdown-divider"></div><a class="dropdown-item" href="patientLogin.html"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                                 </div>
                             </div>
                         </li>
@@ -132,45 +132,38 @@
                 </div>
             </nav>
             <div class="container-fluid">
-                <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                    <h3 class="text-dark mb-0">Welcome to your Profile Mo!</h3>
-                    <div class="justify-content-between align-items-center mb-4">
-                        <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-upload fa-sm text-white-50"></i>&nbsp;Upload Records</a>
-                        <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Download Transactions</a>
-                    </div>
-                </div>
                 <div class="container-fluid">
                     <div class="row mb-3">
                         <div class="col-lg-4">
                             <div class="card mb-3">
-                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="assets/img/dogs/image2.jpeg?h=a0a7d00bcd8e4f84f4d8ce636a8f94d4" width="160" height="160">
+                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="assets/img/avatars/avatar3.jpeg" width="160" height="160">
                                     <div class="mb-3"><button class="btn btn-primary btn-sm" type="button">Change Photo</button></div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="text-primary fw-bold m-0">Projects</h6>
+                                    <h6 class="text-primary fw-bold m-0">Onboarding Progress</h6>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="small fw-bold">Server migration<span class="float-end">20%</span></h4>
+                                    <h4 class="small fw-bold">Privacy Policy<span class="float-end">20%</span></h4>
                                     <div class="progress progress-sm mb-3">
                                         <div class="progress-bar bg-danger" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"><span class="visually-hidden">20%</span></div>
                                     </div>
-                                    <h4 class="small fw-bold">Sales tracking<span class="float-end">40%</span></h4>
+                                    <h4 class="small fw-bold">Health Conditions<span class="float-end">40%</span></h4>
                                     <div class="progress progress-sm mb-3">
                                         <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="visually-hidden">40%</span></div>
                                     </div>
-                                    <h4 class="small fw-bold">Customer Database<span class="float-end">60%</span></h4>
+                                    <h4 class="small fw-bold">Health Records<span class="float-end">60%</span></h4>
                                     <div class="progress progress-sm mb-3">
                                         <div class="progress-bar bg-primary" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="visually-hidden">60%</span></div>
                                     </div>
-                                    <h4 class="small fw-bold">Payout Details<span class="float-end">80%</span></h4>
+                                    <h4 class="small fw-bold">Insurance Linkage<span class="float-end">80%</span></h4>
                                     <div class="progress progress-sm mb-3">
                                         <div class="progress-bar bg-info" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="visually-hidden">80%</span></div>
                                     </div>
-                                    <h4 class="small fw-bold">Account setup<span class="float-end">Complete!</span></h4>
+                                    <h4 class="small fw-bold">Account setup<span class="float-end"> 50%</span></h4>
                                     <div class="progress progress-sm mb-3">
-                                        <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="visually-hidden">100%</span></div>
+                                        <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"><span class="visually-hidden">50%</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -259,13 +252,16 @@
                     </div>
                     <div class="card shadow mb-5">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold">Forum Settings</p>
+                            <p class="text-primary m-0 fw-bold">Health Conditions</p>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <form>
-                                        <div class="mb-3"><label class="form-label" for="signature"><strong>Signature</strong><br></label><textarea class="form-control" id="signature" rows="4" name="signature"></textarea></div>
+                                        <div class="col">
+                                            <div class="mb-3"><label class="form-label" for="hcondition"><strong>Condition #1</strong></label><input class="form-control" type="text" id="hcondition" placeholder="asthma" name="username"></div>
+                                        </div>
+                                        <br>
                                         <div class="mb-3">
                                             <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1"><strong>Notify me about new replies</strong></label></div>
                                         </div>
