@@ -7,7 +7,7 @@
     <title>NHIS</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=cb606d99bb2418df19b6bc818b41e412">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 
@@ -20,19 +20,17 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="doctor.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="patient.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="insurance.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="plist.html"><i class="fas fa-table"></i><span>Patients</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="doctor.html"><i class="fas fa-tachometer-alt"></i><span>Doctor Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="patient.html"><i class="fas fa-tachometer-alt"></i><span>Patient Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="insurance.html"><i class="fas fa-tachometer-alt"></i><span>Insurance Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="patient-list.html"><i class="fas fa-table"></i><span>Patients</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="doctorlist.html"><i class="fas fa-table"></i><span>Doctors</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="chat.html"><i class="fas fa-comments"></i><span>Chat</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="calendar.html"><i class="fas fa-calendar"></i><span>Calendar</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="calendar.html"><i class="fas fa-calendar-days"></i><span>Calendar</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="support.html"><i class="fas fa-headset"></i><span>Support</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="settings.html"><i class="fas fa-cogs"></i><span>Settings</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="register.html"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-right-from-bracket"></i><span>Log Out</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="patientLogin.html"><i class="fas fa-right-from-bracket"></i><span>Log Out</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -54,13 +52,79 @@
                                     </form>
                                 </div>
                             </li>
-                            
-                            
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">3+</span><i class="fas fa-bell fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">alerts center</h6><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 12th, 2021</span>
+                                                <p>A new monthly report is ready to download!</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-success icon-circle"><i class="fas fa-donate text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">January 27th, 2022</span>
+                                                <p>You have new patient appointment requests</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-warning icon-circle"><i class="fas fa-exclamation-triangle text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">May 2nd, 2022</span>
+                                                <p>Dr. Rogers sent you some documents</p>
+                                            </div>
+                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">7</span><i class="fas fa-envelope fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">alerts center</h6><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar4.jpeg?h=fefb30b61c8459a66bd338b7d790c3d5">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Hi there! I am having some red rash forming on my arm, any advice?</span></div>
+                                                <p class="small text-gray-500 mb-0">Emily Ndambuki - 58m</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar2.jpeg?h=5d142be9441885f0935b84cf739d4112">
+                                                <div class="status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>The Health Insurance request made by James Justin for the surgery has been approved.</span></div>
+                                                <p class="small text-gray-500 mb-0">NHIF - 1d</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar3.jpeg?h=c5166867f10a4e454b5b2ae8d63268b3">
+                                                <div class="bg-warning status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Hello i finished my medication and im feeling better, thanks.</span></div>
+                                                <p class="small text-gray-500 mb-0">Dr. Edgar Lumumba - 2d</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar5.jpeg?h=35dc45edbcda6b3fc752dab2b0f082ea">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>We have added some new features!</span></div>
+                                                <p class="small text-gray-500 mb-0">NHIS Team · 2h</p>
+                                            </div>
+                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                    </div>
+                                </div>
+                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-end" aria-labelledby="alertsDropdown"></div>
+                            </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Admin Account</span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar7.jpg" width="100"></a>
-                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a>
-                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Dr.Havi</span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar7.jpg" width="100"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="profile.html"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="patientLogin.html"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
                                 </div>
                             </li>
@@ -71,38 +135,200 @@
                     <div class="row">
                         <div class="col-lg-4 mb-4">
                                 <div class="card-body">
-                                    <img class="rounded-circle me-2" src="assets/img/avatars/avatar4.jpeg?h=fefb30b61c8459a66bd338b7d790c3d5" width="200" style="display: block; margin-left: auto; margin-right: auto;">
-                                    <span class="d-none d-lg-inline me-2 text-gray-600 small text-center"><h4><strong>Bradley Mwalimu</strong></h4></span>
-                                    
+                                    <img class="border rounded-circle img-profile" src="assets/img/avatars/avatar4.jpeg" width="200" style="display: block; margin-left: auto; margin-right: auto;">
+                                    <span class="d-none d-lg-inline me-2 text-gray-600 small text-center"><h4><strong>Anna Mutahi</strong></h4></span>
                                     <div class="row align-items-start no-gutters">
-                                        <p class="card-text"><strong>Occupation:</strong> Software Engineer</p>
-                                        <p class="card-text"><strong>Age:</strong> 41 Years<sup>+</sup></p>
-                                        <p class="card-text"><strong>Residence:</strong> Eldoret</p>
-                                        <p class="card-text"><strong>Gender:</strong> M</p>
-                                        <p class="card-text"><strong>Email:</strong> bradmwalimu@yahoo.com</p>
+                                        <p class="card-text"><strong>DOB:</strong> 16 February 1978</p>
+                                        <p class="card-text"><strong>Phone Number:</strong> +(254)759-624-901</p>
+                                        <p class="card-text"><strong>Email:</strong> annamutahi@gmail.com</p>
+                                        <p class="card-text"><strong>Age:</strong> 45</p>
+                                        <p class="card-text"><strong>Sex:</strong> Female</p>
+                                        <p class="card-text"><strong>Blood Type:</strong> A-</p>
+                                        <p class="card-text"><strong>Weight:</strong> 83 Kg</p>
+                                        <p class="card-text"><strong>Address:</strong> Vipingo, Kilifi</p>
                                         <div class="d-grid gap-2">
-                                            <button type="button" class="btn btn-primary"><img src="https://img.icons8.com/ios-glyphs/24/FFFFFF/phone--v1.png"/> 070-456-7890</button>
+                                            <button type="button" class="btn btn-primary"><img src="https://img.icons8.com/ios-glyphs/24/FFFFFF/phone--v1.png"/> <a href="#" class="text-white m-0">+(254)754-653-187</a></button>
+                                            <button type="button" class="btn btn-primary"><img src="https://img.icons8.com/material-rounded/24/FFFFFF/filled-chat.png"/> <a href="chat.html" class="text-white m-0">Chat</a></button>
+                                            <button type="button" class="btn btn-primary"><img src="https://img.icons8.com/ios-glyphs/24/FFFFFF/phone--v1.png"/> <a href="docforms.html" class="text-white m-0">Add Record</a></button>
                                         </div>
                                     </div>
                                 </div>
                         </div> 
-                        <div class="col-lg-8 mb-4">
-                            <h3><b>Biography</b></h3>
-                            <p>
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere, tempora, illum ad quas accusamus voluptatem delectus nisi ut laboriosam beatae. Fugiat ad facilis porro architecto dolorum nobis facere iusto?
-                            </p>
-                            <h4><b>Medical History</b></h4>
                         
-                            <p> It is a long established fact that a reader will be distracted by 
-                                the readable content of a page when looking at its layout. 
-                                The point of using Lorem Ipsum is that it has a more-or-less normal 
-                                distribution of letters, as opposed to using ‘Content here, content 
-                                here’, making it look like readable English. It is a long established 
-                                fact that a reader will be distracted by the readable content of a page 
-                                when looking at its layout. The point of using Lorem Ipsum is that it has 
-                                a more-or-less normal distribution of letters, as opposed to using ‘Content 
-                                here, content here’, making it look like readable English. </p>
-                        </div>    
+                        <div class="col-lg-8 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 col-xl-3 mb-4">
+                                        <div class="card shadow border-start-primary py-2">
+                                            <div class="card-body">
+                                                <div class="row align-items-center no-gutters">
+                                                    <div class="col me-2">
+                                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Blood Pressure</span></div>
+                                                        <div class="text-dark fw-bold h5 mb-0"><span>128/76</span></div>
+                                                    </div>
+                                                    <div class="col-auto"><img src="https://img.icons8.com/external-isometric-vectorslab/46/null/external-Blood-Drops-medical-and-healthcare-isometric-vectorslab.png"/></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xl-3 mb-4">
+                                        <div class="card shadow border-start-success py-2">
+                                            <div class="card-body">
+                                                <div class="row align-items-center no-gutters">
+                                                    <div class="col me-2">
+                                                        <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Glucose Level</span></div>
+                                                        <div class="text-dark fw-bold h5 mb-0"><span>156</span></div>
+                                                    </div>
+                                                    <div class="col-auto"><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/46/null/external-diabetes-pharmaceutical-flaticons-lineal-color-flat-icons-3.png"/></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xl-3 mb-4">
+                                        <div class="card shadow border-start-success py-2">
+                                            <div class="card-body">
+                                                <div class="row align-items-center no-gutters">
+                                                    <div class="col me-2">
+                                                        <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Blood Count</span></div>
+                                                        <div class="text-dark fw-bold h5 mb-0"><span>7.93/ml</span></div>
+                                                    </div>
+                                                    <div class="col-auto"><img src="https://img.icons8.com/external-jumpicon-line-gradient-ayub-irawan/46/null/external-Glucose-diabetes-jumpicon-(line-gradient)-jumpicon-line-gradient-ayub-irawan.png"/></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xl-3 mb-4">
+                                        <div class="card shadow border-start-warning py-2">
+                                            <div class="card-body">
+                                                <div class="row align-items-center no-gutters">
+                                                    <div class="col me-2">
+                                                        <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Weight</span></div>
+                                                        <div class="text-dark fw-bold h5 mb-0"><span>83 Kg</span></div>
+                                                    </div>
+                                                    <div class="col-auto"><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/46/null/external-scale-lifestyles-flaticons-lineal-color-flat-icons.png"/></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-7 col-xl-12">
+                                        <div class="card shadow mb-4">
+                                            <div class="card-header py-3">
+                                                <h6 class="text-primary fw-bold m-0">Medical History</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;,&quot;Sept&quot;,&quot;Oct&quot;,&quot;Nov&quot;,&quot;Dec&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Cases&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;2&quot;,&quot;3&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;5&quot;,&quot;4&quot;,&quot;8&quot;,&quot;7&quot;,&quot;6&quot;,&quot;9&quot;,&quot;10&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;}},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;fontStyle&quot;:&quot;normal&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <div class="card text-white bg-primary shadow">
+                                            <div class="card-body">
+                                                <p class="m-0">Condition #1</p>
+                                                <p class="text-white-50 small m-0">Asthma</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <div class="card text-white bg-success shadow">
+                                            <div class="card-body">
+                                                <p class="m-0">Condition #2</p>
+                                                <p class="text-white-50 small m-0">Hypertension</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <div class="card text-white bg-info shadow">
+                                            <div class="card-body">
+                                                <p class="m-0">Condition #3</p>
+                                                <p class="text-white-50 small m-0">Dyslexia</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <div class="card text-white bg-warning shadow">
+                                            <div class="card-body">
+                                                <p class="m-0">Condition #4</p>
+                                                <p class="text-white-50 small m-0">Diabetes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="text-primary fw-bold m-0">Health Records</h6>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col-auto">
+                                                <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/35/null/external-docx-file-file-extension-fauzidea-flat-fauzidea.png"/>
+                                            </div>
+                                            <div class="col me-2">
+                                                <h6 class="mb-0"><strong>Medical Checkup Report.docx</strong></h6><span class="text-xs">2.3 Mb</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="path/to/download/file" class="btn btn-download"><img src="https://img.icons8.com/arcade/25/null/download.png"/></a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="path/to/download/file" class="btn btn-download"><img src="https://img.icons8.com/plasticine/25/null/filled-trash.png"/></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col-auto">
+                                                <img src="https://img.icons8.com/fluency/35/null/pdf-2.png"/>
+                                            </div>
+                                            <div class="col me-2">
+                                                <h6 class="mb-0"><strong>Blood Count Report.pdf</strong></h6><span class="text-xs">2.7Mb</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="path/to/download/file" class="btn btn-download"><img src="https://img.icons8.com/arcade/25/null/download.png"/></a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="path/to/download/file" class="btn btn-download"><img src="https://img.icons8.com/plasticine/25/null/filled-trash.png"/></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col-auto">
+                                                <img src="https://img.icons8.com/fluency/35/null/pdf-2.png"/>
+                                            </div>
+                                            <div class="col me-2">
+                                                <h6 class="mb-0"><strong>Urine Analysis Report.pdf</strong></h6><span class="text-xs">1.6 Mb</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="path/to/download/file" class="btn btn-download"><img src="https://img.icons8.com/arcade/25/null/download.png"/></a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="path/to/download/file" class="btn btn-download"><img src="https://img.icons8.com/plasticine/25/null/filled-trash.png"/></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col-auto">
+                                                <img src="https://img.icons8.com/fluency/35/null/pdf-2.png"/>
+                                            </div>
+                                            <div class="col me-2">
+                                                <h6 class="mb-0"><strong>MRI Scans.pdf</strong></h6><span class="text-xs">43.2 Mb</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="path/to/download/file" class="btn btn-download"><img src="https://img.icons8.com/arcade/25/null/download.png"/></a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="path/to/download/file" class="btn btn-download"><img src="https://img.icons8.com/plasticine/25/null/filled-trash.png"/></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>    
                     </div>         
                 </div>
             <footer class="bg-white sticky-footer">
